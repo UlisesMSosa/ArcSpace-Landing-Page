@@ -1,0 +1,40 @@
+ArcSpace Web 🌐
+Versión web de ArcSpace, desarrollada a partir del proyecto original en Pygame como parte de la adaptación del juego para su ejecución directamente desde el navegador.
+
+🎮 Proyecto original
+El juego original puede encontrarse aquí:
+
+➡️ https://github.com/UlisesMSosa/ArcSpace
+
+Esta versión mantiene la jugabilidad principal, pero fue modificada para funcionar como una aplicación web.
+
+✨ ¿Qué cambió respecto a la versión original?
+🌐 Ejecución en navegador
+Ya no requiere instalar Python.
+Puede jugarse desde cualquier navegador compatible.
+Despliegue preparado para Vercel.
+🖥️ Interfaz adaptada
+Ajustes en la resolución y el renderizado para adaptarse al entorno web.
+Mejor integración con HTML y CSS.
+Añade una interfaz nueva y mejorada para ejecutarse en dispositivos moviles.
+Adapta los controles para dar una experiencia de juego fluida en movil.
+☁️ Despliegue
+El proyecto fue adaptado para ejecutarse en un servicio de hosting web, permitiendo acceder al juego desde cualquier dispositivo sin instalación.
+
+🛠️ Tecnologías
+Cliente
+HTML5
+CSS3
+JavaScript
+Despliegue
+Vercel
+📷 Comparación
+Proyecto original	Versión Web
+Ejecutable de escritorio	Navegador
+Pygame	HTML + JavaScript
+Instalación necesaria	Acceso mediante URL
+🎯 Objetivo
+El objetivo de este proyecto fue demostrar cómo un videojuego desarrollado originalmente con Pygame puede adaptarse para funcionar completamente en la web, conservando la mayor parte de su lógica y mecánicas mientras se incorporan tecnologías propias del desarrollo web moderno.
+
+📄 Licencia
+Este proyecto se basa en el repositorio original ArcSpace, manteniendo el mismo propósito educativo.

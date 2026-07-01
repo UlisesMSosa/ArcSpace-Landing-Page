@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArcSpace: Observatorio Estelar Arcade - Videojuego educativo">
+    <title>ArcSpace | Observatorio Estelar Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Permanent+Marker&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="comic-bg"></div>
+
+    <div class="onomatopeya o-1">KABOOM!</div>
+    <div class="onomatopeya o-2">POW!</div>
+    <div class="onomatopeya o-3">ZAP!</div>
+    <div class="onomatopeya o-4">WHAM!</div>
+    <div class="onomatopeya o-5">SNAP!</div>
+    <div class="onomatopeya o-6">BOOM!</div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">ARCSPACE</a>
+            <ul class="nav-links">
+                <li><a href="#que-es">¿Qué es?</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#web">Web</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-action-lines"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">ARCSPACE</h1>
+            <p class="hero-subtitle">Observatorio Estelar Arcade</p>
+            <p class="hero-desc">Un videojuego educativo interactivo que fusiona la emoción de las mecánicas arcade con la divulgación científica astronómica.</p>
+            <div class="hero-buttons">
+                <a href="#que-es" class="btn btn-primary"><span>Descubrir</span></a>
+                <a href="https://github.com/UlisesMSosa/ArcSpace" target="_blank" class="btn btn-secondary"><span>GitHub</span></a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <section id="que-es" class="section">
+        <div class="halftone-overlay"></div>
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <div class="title-burst"></div>
+                <h2 class="section-title">¿QUÉ ES ARCSPACE?</h2>
+            </div>
+            <div class="divider reveal">
+                <span class="divider-star">★</span>
+            </div>
+            <p class="section-desc reveal">
+                <strong>ArcSpace</strong> es un proyecto educativo e institucional desarrollado para la 
+                <strong>Tecnicatura Superior en Desarrollo de Software</strong>. Su objetivo es introducir a 
+                <strong>niños de 6, 7 y 8 años</strong> (Primer Ciclo de la Escuela Primaria) al fascinante mundo 
+                de la astronomía a través del juego.
+            </p>
+            <div class="info-cards reveal">
+                <div class="info-card comic-card">
+                    <div class="info-icon">🎮</div>
+                    <h3>Gamificación sin Frustración</h3>
+                    <p>El juego utiliza "Intermisiones" narrativas y pausas guiadas. Si el tiempo expira, el niño avanza hacia la estación de revelado sin perder de forma punitiva.</p>
+                </div>
+                <div class="info-card comic-card">
+                    <div class="info-icon">👁️</div>
+                    <h3>Estimulación Visomotora</h3>
+                    <p>El control de la mira telescópica mediante movimientos suaves entrena el reconocimiento espacial, la precisión analógica y la coordinación ojo-mano.</p>
+                </div>
+                <div class="info-card comic-card">
+                    <div class="info-icon">📸</div>
+                    <h3>Refuerzo Positivo</h3>
+                    <p>El "Álbum de Fotos" digital fomenta el sentido de pertenencia y logro a través de la gamificación permanente, invitando a completar los descubrimientos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="caracteristicas" class="section section-dark">
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <div class="title-burst"></div>
+                <h2 class="section-title">CARACTERÍSTICAS TÉCNICAS</h2>
+            </div>
+            <div class="divider reveal">
+                <span class="divider-star">★</span>
+            </div>
+            <div class="features-grid reveal">
+                <div class="feature-card comic-card">
+                    <div class="feature-number">
+                        <span class="num-burst">01</span>
+                    </div>
+                    <h3>Máquina de Estados Finitos</h3>
+                    <p>El flujo completo del juego está estructurado mediante un motor de estados centralizado: Menú, Intermisiones, Jugando, Reporte, Álbum y Puntajes.</p>
+                </div>
+                <div class="feature-card comic-card">
+                    <div class="feature-number">
+                        <span class="num-burst">02</span>
+                    </div>
+                    <h3>Persistencia JSON</h3>
+                    <p>Sistema de serialización que administra el archivo de guardado, registrando fotos desbloqueadas y el historial de puntajes máximos con marca de tiempo.</p>
+                </div>
+                <div class="feature-card comic-card">
+                    <div class="feature-number">
+                        <span class="num-burst">03</span>
+                    </div>
+                    <h3>Animación Matemática</h3>
+                    <p>El revelado polar analógico simula el proceso físico de una fotografía Polaroid mediante transformaciones de escala dinámicas y giros polares.</p>
+                </div>
+                <div class="feature-card comic-card">
+                    <div class="feature-number">
+                        <span class="num-burst">04</span>
+                    </div>
+                    <h3>Algoritmo Anti-Superposición</h3>
+                    <p>Sistema de generación de posiciones válidas por radio de seguridad decreciente, asegurando que ningún astro tape visualmente a otro en el mapa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="web" class="section">
+        <div class="halftone-overlay"></div>
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <div class="title-burst"></div>
+                <h2 class="section-title">VERSIÓN WEB</h2>
+            </div>
+            <div class="divider reveal">
+                <span class="divider-star">★</span>
+            </div>
+            <div class="web-content reveal">
+                <div class="web-text">
+                    <p class="section-desc">
+                        ArcSpace fue adaptado del proyecto original en <strong>Pygame</strong> a una aplicación web 
+                        moderna que se ejecuta directamente desde el navegador, sin necesidad de instalar Python.
+                    </p>
+                    <ul class="web-features">
+                        <li>🌐 Ejecución en cualquier navegador compatible</li>
+                        <li>📱 Interfaz adaptada para dispositivos móviles</li>
+                        <li>☁️ Despliegue preparado para Vercel</li>
+                        <li>🎮 Controles táctiles para experiencia fluida en móvil</li>
+                    </ul>
+                    <div class="tech-badges">
+                        <span class="badge comic-badge">HTML5</span>
+                        <span class="badge comic-badge">CSS3</span>
+                        <span class="badge comic-badge">JavaScript</span>
+                        <span class="badge comic-badge">Vercel</span>
+                    </div>
+                    <a href="https://github.com/UlisesMSosa/ArcSpace" target="_blank" class="btn btn-primary github-btn">
+                        <span>Ver en GitHub</span>
+                    </a>
+                </div>
+                <div class="web-comparison reveal">
+                    <div class="comparison-card comic-card">
+                        <h4>Proyecto Original</h4>
+                        <ul>
+                            <li>Ejecutable de escritorio</li>
+                            <li>Pygame</li>
+                            <li>Instalación necesaria</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-vs">
+                        <span>VS</span>
+                    </div>
+                    <div class="comparison-card card-web comic-card">
+                        <h4>Versión Web</h4>
+                        <ul>
+                            <li>Navegador</li>
+                            <li>HTML + JavaScript</li>
+                            <li>Acceso mediante URL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section section-dark">
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <div class="title-burst"></div>
+                <h2 class="section-title">GALERÍA</h2>
+            </div>
+            <div class="divider reveal">
+                <span class="divider-star">★</span>
+            </div>
+            <p class="section-desc accent-text reveal">Capturas del juego en acción</p>
+            <div class="carousel-container reveal">
+                <div class="carousel-comic-frame">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-03-40.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-04-12.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-04-20.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-04-25.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-04-35.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-04-45.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-04-50.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-04-55.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-04-58.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-05-08.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-05-43.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-06-37.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-07-19.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-08-32.png" alt="Captura ArcSpace"></div>
+                        <div class="carousel-slide"><img src="img/Captura desde 2026-07-01 14-09-00.png" alt="Captura ArcSpace"></div>
+                    </div>
+                    <button class="carousel-btn carousel-prev" id="prevBtn">&#10094;</button>
+                    <button class="carousel-btn carousel-next" id="nextBtn">&#10095;</button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="section">
+        <div class="halftone-overlay"></div>
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <div class="title-burst"></div>
+                <h2 class="section-title">TECNOLOGÍAS</h2>
+            </div>
+            <div class="divider reveal">
+                <span class="divider-star">★</span>
+            </div>
+            <div class="tech-grid reveal">
+                <div class="tech-item comic-card">
+                    <div class="tech-icon py">&#9881;</div>
+                    <span>Python 3</span>
+                </div>
+                <div class="tech-item comic-card">
+                    <div class="tech-icon">&#9878;</div>
+                    <span>Pygame</span>
+                </div>
+                <div class="tech-item comic-card">
+                    <div class="tech-icon">&#123;</div>
+                    <span>JSON</span>
+                </div>
+                <div class="tech-item comic-card">
+                    <div class="tech-icon html">&#60;/&#62;</div>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item comic-card">
+                    <div class="tech-icon css">&#10003;</div>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item comic-card">
+                    <div class="tech-icon js">JS</div>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item comic-card">
+                    <div class="tech-icon">&#9729;</div>
+                    <span>Vercel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-zigzag"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>ARCSPACE</h3>
+                    <p>Observatorio Estelar Arcade</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/UlisesMSosa/ArcSpace" target="_blank">GitHub</a>
+                    <a href="#que-es">Acerca de</a>
+                    <a href="#galeria">Galería</a>
+                </div>
+                <div class="footer-license">
+                    <p>Proyecto educativo con propósito de divulgación científica.</p>
+                    <p>&copy; ArcSpace</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-next-issue">
+            <span>ArcSpace will return in</span>
+            <span class="footer-godot">GODOT</span>
+            <span class="footer-arrow">→</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
