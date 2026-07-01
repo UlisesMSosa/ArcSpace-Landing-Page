@@ -754,6 +754,13 @@ body {
     background: var(--marvel-red);
 }
 
+.web-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .github-btn {
     display: inline-block;
 }
