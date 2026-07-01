@@ -252,6 +252,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ----- SCROLL DOWN + NEXT SECTION BUTTON -----
+    const scrollDownBtn = document.getElementById('scrollDownBtn');
+    const nextSectionBtn = document.getElementById('nextSectionBtn');
+    const nsTooltip = document.getElementById('nsTooltip');
+
+    const sections = [
+        { id: 'que-es', label: '¿Qué es?' },
+        { id: 'caracteristicas', label: 'Características' },
+        { id: 'web', label: 'Versión Web' },
+        { id: 'galeria', label: 'Galería' },
+        { id: 'tecnologias', label: 'Tecnologías' },
+        { id: 'footer', label: 'Final' }
+    ];
+
+    function getCurrentSectionIndex() {
+        const scrollY = window.scrollY;
+        const offset = 150;
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const el = document.getElementById(sections[i].id);
+            if (el && el.offsetTop - offset <= scrollY) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function scrollToSection(index) {
+        if (index >= sections.length) return;
+        const el = document.getElementById(sections[index].id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    scrollDownBtn.addEventListener('click', () => {
+        scrollToSection(0);
+    });
+
+    nextSectionBtn.addEventListener('click', () => {
+        const current = getCurrentSectionIndex();
+        scrollToSection(current + 1);
+    });
+
+    function updateNextSectionBtn() {
+        const current = getCurrentSectionIndex();
+        const heroHeight = window.innerHeight;
+
+        if (window.scrollY < heroHeight - 100) {
+            nextSectionBtn.classList.remove('visible');
+            return;
+        }
+
+        const next = current + 1;
+        if (next < sections.length) {
+            nextSectionBtn.classList.add('visible');
+            nsTooltip.textContent = sections[next].label;
+        } else {
+            nextSectionBtn.classList.remove('visible');
+        }
+    }
+
+    window.addEventListener('scroll', updateNextSectionBtn);
+    window.addEventListener('resize', updateNextSectionBtn);
+    updateNextSectionBtn();
+
     // ----- MOBILE NAV TOGGLE -----
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.querySelector('.nav-links');
